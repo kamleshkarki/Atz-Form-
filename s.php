@@ -1,7 +1,5 @@
 <?php
-
 if(isset($_POST['submit']))
-
 {
 $servername = "localhost";
 $username = "root";
@@ -25,9 +23,6 @@ if ($conn->connect_error) {
 	$loc = $_POST["loc"];
 	$ba = $_POST["ba"];
 	$empno = $_POST["empno"];
-	
-
-
 
 $sql ="INSERT INTO `atzcart_from`(`VendorName`, `Email`, `ContactNumber`, 
 `BusinessCategory`, `TypeOfProduct`, `Location`, `BusinessAddress`, 
@@ -39,10 +34,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 $conn->close();
-
 }
-
-
 ?>
